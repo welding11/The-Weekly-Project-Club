@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cupcake Sales</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha256-t9UJPrESBeG2ojKTIcFLPGF7nHi2vEc7f5A2KpH/UBU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js" integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/plugin/isBetween.min.js" integrity="sha512-nmMfLHPXFHUlBJ8i7pPVMkqK+Up7B/hr/5uVDPyweIs6Gjsb+oC8B1mycv8WgNh1PzOLoXJKtczE+LZLXB+EEA==" crossorigin="anonymous"></script>
+    <script src="./scripts/app.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <h1 class="title has-text-centered">Cupcake Store</h1>
+
+    <div class="file is-centered is-boxed is-success has-name">
+        <label class="file-label">
+            <input class="file-input" type="file" multiple name="cupcakes" id="cupcakes-file">
+            <span class="file-cta">
+            <span class="file-icon">
+                <i class="fas fa-upload"></i>
+            </span>
+            <span class="file-label">
+                Upload Files…
+            </span>
+            </span>
+        </label>
+    </div>
+
+    <div class="container is-hidden">
+        <h2 class="subtitle is-2">Stats</h2>
+        
+        <div class="tabs is-boxed">
+            <ul>
+                <li><a data-type="year">Yearly</a></li>
+                <li><a data-type="month">Monthly</a></li>
+                <li><a data-type="week">Weekly</a></li>
+            </ul>
+        </div>
+        
+        <div class="year is-hidden">
+            <h3 class="subtitle is-3">Yearly</h3>
+            
+            <div class="chart-container" style="position: relative;">
+                <canvas id="yearChart"></canvas>
+            </div>
+            
+            <table id="yearTable" class="table is-fullwidth is-striped">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>Total Revenue</td>
+                        <td>Total Basic Cupcakes(sold/revenue)</td>
+                        <td>Total Deluxe Cupcakes(sold/revenue)</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="month is-hidden">
+            <h3 class="subtitle is-3">Monthly</h3>
+            
+            <div class="chart-container" style="position: relative;">
+                <canvas id="monthChart"></canvas>
+            </div>
+            
+            <table id="monthTable" class="table is-fullwidth is-striped">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>Total Revenue</td>
+                        <td>Total Basic Cupcakes(sold/revenue)</td>
+                        <td>Total Deluxe Cupcakes(sold/revenue)</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="week is-hidden">
+            <h3 class="subtitle is-3">Weekly</h3>
+            
+            <div class="chart-container" style="position: relative;">
+                <canvas id="weekChart"></canvas>
+            </div>
+            
+            <table id="weekTable" class="table is-fullwidth is-striped">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>Total Revenue</td>
+                        <td>Total Basic Cupcakes(sold/revenue)</td>
+                        <td>Total Deluxe Cupcakes(sold/revenue)</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

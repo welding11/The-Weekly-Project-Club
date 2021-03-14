@@ -1,0 +1,24 @@
+Cupcakes
+
+•	These documents never have dates, each line was entered on a different day.  The bottom-most row is always 'Today', the row above that is 'Yesterday', and so on.
+•	The files are always lined up perfectly, you never have to worry about them being 'out of sync' or anything like that.
+•	Basic.txt is the number of basic cupcakes she sold on that day, and they cost $5.  
+•	Deluxe.txt is the number of Deluxe cupcakes (they have sprinkles!) sold on that day, and they cost $6.  
+•	Total.txt is the total money she made (let's not even think about taxes yet, ugh).
+
+1.	Yearly Revenue Totals
+2.	Monthly Revenue Totals
+3.	Weekly Revenue Totals
+
+If you want to get fancy, here's how you might take it even further: 
+1.	Break these stats down by item.
+2.	Generate a graph of the data, Matilda loves charts
+3.	Get creative with the input.  Maybe you can think of something she'll actually use.
+
+
+Basics
+
+Local HTML page with an input box for the user(Arthur) to select the files and input them as named.
+Loop through each file and collate the numbers in an object which contains all three  against a date
+Display Yearly/Monthly/Weekly stats in a table with individual items listed also
+
